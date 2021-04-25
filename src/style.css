@@ -13,7 +13,10 @@ a{
   text-decoration: none;
   color: inherit;
 }
-
+a:hover{
+  cursor: pointer;
+  color:red;
+}
 #enter-city {
   display: block;
   margin: 0 auto;
