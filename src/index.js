@@ -33,7 +33,7 @@ function citySearch(event){
   event.preventDefault();
   let city= document.querySelector("#enter-city").value;
   let units="metric";
-  let apiKey="c4191448319e8ab34409f6dc57e8ef36";
+  let apiKey="8aefcb8b0d435a4e0694947bbcb7132d";
   let apiUrl="https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric";
   axios.get(apiUrl).then(showTemeperature);
 }
