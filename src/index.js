@@ -22,7 +22,7 @@ h3.innerHTML = `${day}, ${hour} : ${minutes}`;
 function showTemeperature(response){
 let temperature= Math.round(response.data.main.temp);
 let currentTemperature= document.querySelector("#temperature");
-currentTemperature.innerHTML= `${temperature}`;
+currentTemperature.innerHTML= `${temperature} ℃`;
 let city= response.data.name;
 let currentCity= document.querySelector("#city");
 currentCity.innerHTML=`${city}`;
