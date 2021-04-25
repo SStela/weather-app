@@ -1,0 +1,66 @@
+body {
+  font-family: "Shippori Mincho B1", serif;
+  background: url(https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+h2,
+h3 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 25px;
+}
+
+#enter-city {
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+#search-city {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 60%;
+  cursor: pointer;
+}
+
+#search-city:hover {
+  color: black;
+  background-color: white;
+}
+
+#city {
+  text-align: center;
+  font-size: 54px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.temperature {
+  text-align: center;
+  font-size: 30px;
+}
+.row {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+}
+.col-md {
+  text-align: center;
+  font-size: 20px;
+  margin: 5px 5px;
+  padding: 10px;
+  border: 2px solid black;
+}
+.col-md:hover {
+  color: red;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 35px;
+  text-decoration: underline;
+}
