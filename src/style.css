@@ -73,3 +73,6 @@ footer {
   margin-top: 35px;
   text-decoration: underline;
 }
+hr{
+  border: 1px solid black;
+}
