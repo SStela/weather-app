@@ -21,6 +21,7 @@
   </head>
   <body>
     <div class="container">
+      <div class="row">
       <form class="city-search" id="city-search-form">
         <input
           type="search"
@@ -30,9 +31,10 @@
           id="enter-city"
         />
         <input type="submit" value="🔍" id="search-city" />
+        </div>
       </form>
       <h1 id="city">Zagreb</h1>
-      <h2 id="temperature">
+      <h2 id="temperature" class="weather-temperature">
         17
         <a href="#" id="celsius">°C</a> |
         <a href="#" id="fahrenheit">°F</a>
@@ -48,29 +50,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md">
-            Monday <br />
-            ☀ <br />
-            16℃
-          </div>
-          <div class="col-md">
-            Tuesday<br />
-            ☀ <br />
-            12℃
-          </div>
-          <div class="col-md">
-            Wednesday<br />
-            ☁ <br />
-            7℃
-          </div>
-          <div class="col-md">
-            Thursday<br />
-            ⛅ <br />
-            8℃
-          </div>
-          <div class="col-md">
-            Friday<br />
-            🌤 <br />
-            10℃
+            <div class= "weather-forecast" id="forecast"></div>
           </div>
         </div>
       </div>

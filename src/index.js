@@ -29,6 +29,14 @@ function formatDay(timestamp){
   return days[day];
 }
 
+
+function getForecast(coordinates){
+  let apiKey="8aefcb8b0d435a4e0694947bbcb7132d";
+  let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(forecastDisplay);
+
+}
+
 function showTemeperature(response){
 let temperature= Math.round(response.data.main.temp);
 let currentTemperature= document.querySelector("#temperature");
@@ -38,6 +46,8 @@ let currentCity= document.querySelector("#city");
 currentCity.innerHTML=`${city}`;
 document.querySelector("#wind").innerHTML=`WIND: ${response.data.wind.speed}km/h`;
 document.querySelector("#humidity").innerHTML=` HUMIDITY: ${response.data.main.humidity}%`;
+
+getForecast(response.data.coord);
 
 }
 function citySearch(event){
