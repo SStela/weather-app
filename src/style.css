@@ -10,7 +10,7 @@ h3 {
   font-size: 25px;
 }
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: inherit;
 }
 a:hover {
@@ -21,8 +21,10 @@ a:hover {
   display: block;
   margin: 0 auto;
   margin-top: 15px;
-  border-radius: 5px;
+  border-radius: 6px;
+  border:none;
   outline: 0;
+  line-height: 30px;
 }
 
 #search-city {
@@ -30,7 +32,6 @@ a:hover {
   margin: 0 auto;
   margin-top: 10px;
   color: white;
-  background-color: black;
   border: 1px solid black;
   border-radius: 60%;
   cursor: pointer;
@@ -71,7 +72,6 @@ footer {
   text-align: center;
   font-size: 14px;
   margin-top: 35px;
-  text-decoration: underline;
 }
 hr{
   border: 1px solid black;
