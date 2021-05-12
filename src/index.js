@@ -1,5 +1,5 @@
-let now = new Date();
-let date = now.getDate();
+function formatDate(timestamp){
+let date = now.getDate(timestamp);
 let hour = now.getHours();
 if (hour < 10) {
   hour = `0${hour}`;
@@ -20,7 +20,14 @@ let days = [
 let day = days[now.getDay()];
 
 let h3 = document.querySelector("h3");
-h3.innerHTML = `${day}, ${hour} : ${minutes}`;
+h3.innerHTML = `${day}, ${hour}:${minutes}`;
+}
+function formatDay(timestamp){
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  return days[day];
+}
 
 function showTemeperature(response){
 let temperature= Math.round(response.data.main.temp);
