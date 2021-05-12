@@ -10,12 +10,12 @@ h3 {
   font-size: 25px;
 }
 a {
-  text-decoration: underline;
-  color: inherit;
+  text-decoration: none;
+  color:inherit;
 }
 a:hover {
   cursor: pointer;
-  color: red;
+  color: blue;
 }
 #enter-city {
   display: block;
@@ -65,7 +65,7 @@ a:hover {
   border: 2px solid black;
 }
 .col-md:hover {
-  color: red;
+  color: blue;
 }
 
 footer {

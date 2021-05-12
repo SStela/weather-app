@@ -27,6 +27,7 @@ let city= response.data.name;
 let currentCity= document.querySelector("#city");
 currentCity.innerHTML=`${city}`;
 document.querySelector("#wind").innerHTML=`WIND: ${response.data.wind.speed}km/h`;
+document.querySelector("#humidity").innerHTML=` HUMIDITY: ${response.data.main.humidity}%`;
 
 }
 function citySearch(event){
