@@ -103,16 +103,8 @@ function convertCelsius(event) {
   temperatureConvert.innerHTML = "17℃";
 }
 
-function convertFahrenheit(event) {
-  event.preventDefault();
-  let temperatureConvert = document.querySelector("#temperature");
-  temperatureConvert.innerHTML = "66℉";
-}
 
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", convertCelsius);
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", convertFahrenheit);
 
 citySearch("Zagreb");
