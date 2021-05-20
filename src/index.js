@@ -1,15 +1,15 @@
-let now = new Date();
 function formatDate(timestamp){
-let date = now.getDate(timestamp);
-let hour = now.getHours();
-if (hour < 10) {
+  let date = new Date(timestamp);
+  let hour = now.getHours();
+  if (hour < 10) {
   hour = `0${hour}`;
 }
-let minutes = now.getMinutes();
-if(minutes<10){
+  let minutes = now.getMinutes();
+  if(minutes<10){
   minutes=`0${minutes}`;
 }
-let days = [
+  let day = days[date.getDay()];
+  let days = [
   "Sunday",
   "Monday",
   "Tuesday",
@@ -18,10 +18,8 @@ let days = [
   "Friday",
   "Saturday"
 ];
-let day = days[now.getDay()];
 
-let h3 = document.querySelector("h3");
-h3.innerHTML = `${day}, ${hour}:${minutes}`;
+return `${day}, ${hour}:${minutes}`;
 }
 function formatDay(timestamp){
   let date = new Date(timestamp * 1000);
@@ -34,9 +32,9 @@ function forecastDisplay(response){
   let forecast=response.data.daily;
   let forecastElement= document.querySelector("#forecast");
 
-  let forecastHTML = ` <div class="row">`;
+  let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index){
-    if(index<6){
+    if(index < 6){
       forecastHTML= 
       forecastHTML + 
       `<div class="col-2">
@@ -80,6 +78,10 @@ let currentCity= document.querySelector("#city");
 currentCity.innerHTML=`${city}`;
 document.querySelector("#wind").innerHTML=`WIND: ${response.data.wind.speed}km/h`;
 document.querySelector("#humidity").innerHTML=` HUMIDITY: ${response.data.main.humidity}%`;
+/*let currentDate= document.querySelector("#current-date");
+currentDate.innerHTML=formatDate(response.data.dt*1000);
+let icon=document.querySelector("#current-weather-icon");
+icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); */
 
 getForecast(response.data.coord);
 
