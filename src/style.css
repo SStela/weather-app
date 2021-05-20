@@ -9,6 +9,7 @@ h3 {
   margin-top: 30px;
   font-size: 25px;
 }
+
 a {
   text-decoration: none;
   color:inherit;
@@ -17,6 +18,7 @@ a:hover {
   cursor: pointer;
   color: blue;
 }
+
 #enter-city {
   display: block;
   margin: 0 auto;
